@@ -1,17 +1,4 @@
 $("ul").on("click","li",function () {
-	/*if($(this).css("color") === "rgb(128, 128, 128)"){
-		$(this).css({
-			color: "black",
-			textDecoration: "none"
-		});
-	}
-	else {
-		$(this).css({
-			color: "gray",
-			textDecoration: "line-through"
-		});
-	}*/
-
 	$(this).toggleClass("completed");
 });
 
@@ -28,4 +15,8 @@ $("input[type='text'").keypress(function(){
 		$(this).val("");
 		$("ul").append("<li><span><i class='fa fa-trash'></i></span> "+todoText+"</li>");
 	}
+});
+
+$(".fa-plus").click(function(){
+	$("input[type='text'").fadeToggle();
 });
